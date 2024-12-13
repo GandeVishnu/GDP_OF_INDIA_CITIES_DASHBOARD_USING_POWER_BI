@@ -29,7 +29,7 @@ def display_dashboard():
         <iframe 
             title="15cities" 
             width="100%" 
-            height="100%" 
+            height="500px" 
             src="https://app.powerbi.com/view?r=eyJrIjoiZmY4YTE1MjktMDlmMy00ZjU3LWE0NTUtMTY0ZTMxMmMwODA5IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" 
             frameborder="0" 
             allowFullScreen="true">
