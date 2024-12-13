@@ -29,7 +29,7 @@ def display_dashboard():
         <iframe 
             title="15cities" 
             width="100%" 
-            height="500" 
+            height="500px" 
             src="https://app.powerbi.com/view?r=eyJrIjoiZmY4YTE1MjktMDlmMy00ZjU3LWE0NTUtMTY0ZTMxMmMwODA5IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" 
             frameborder="0" 
             allowFullScreen="true">
@@ -99,37 +99,25 @@ def main():
         st.markdown(""" 
             <style>
                 .title-text {
-                    font-size: 50px;
+                    font-size: 40px;
                     font-weight: bold;
                     color: DodgerBlue;
-                    text-align: center;  /* Ensure the text is centered */
+                    padding: center;
                     text-transform: uppercase;
                     letter-spacing: 3px;
-                    padding-top: 50px; /* Add some space from the top */
                 }
                 .subtitle-text {
-                    font-size: 20px;
-                    text-align: center;  /* Center the subtitle text */
+                    font-size: 18px;
+                    text-align: center;
                     color: Tomato;
-                    padding-top: 20px;
                     padding-bottom: 30px;
                 }
-                /* Adjustments for smaller screens */
-                @media (max-width: 1024px) {
-                    .title-text {
-                        font-size: 40px;  /* Reduce the title size for tablet and laptop modes */
-                    }
-                    .subtitle-text {
-                        font-size: 18px;  /* Reduce subtitle size for smaller screens */
-                    }
-                }
-                /* Further adjustments for mobile */
                 @media (max-width: 768px) {
                     .title-text {
-                        font-size: 30px;  /* Reduce the title size for mobile */
+                        font-size: 30px;
                     }
                     .subtitle-text {
-                        font-size: 14px;  /* Reduce subtitle size for mobile */
+                        font-size: 14px;
                     }
                 }
                 /* Responsive layout for buttons */
