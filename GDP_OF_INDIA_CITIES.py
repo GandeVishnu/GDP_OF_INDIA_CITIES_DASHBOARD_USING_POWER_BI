@@ -114,7 +114,15 @@ def main():
                     padding-top: 20px;
                     padding-bottom: 30px;
                 }
-             
+                /* Adjustments for smaller screens */
+                @media (max-width: 1024px) {
+                    .title-text {
+                        font-size: 40px;  /* Reduce the title size for tablet and laptop modes */
+                    }
+                    .subtitle-text {
+                        font-size: 18px;  /* Reduce subtitle size for smaller screens */
+                    }
+                }
                 /* Further adjustments for mobile */
                 @media (max-width: 768px) {
                     .title-text {
