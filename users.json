@@ -1,0 +1,12 @@
+{
+    "hello@gmail.com": {
+        "name": "Vishnu",
+        "email": "hello@gmail.com",
+        "password": "1234"
+    },
+    "hi@gmail.com": {
+        "name": "Gande Vishnu Vardhan",
+        "email": "hi@gmail.com",
+        "password": "123"
+    }
+}
