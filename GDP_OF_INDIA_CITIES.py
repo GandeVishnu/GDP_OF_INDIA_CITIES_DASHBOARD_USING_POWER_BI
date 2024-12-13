@@ -28,8 +28,8 @@ def display_dashboard():
     <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
         <iframe 
             title="15cities" 
-            width="950" 
-            height="500" 
+            width="100%" 
+            height="100%" 
             src="https://app.powerbi.com/view?r=eyJrIjoiZmY4YTE1MjktMDlmMy00ZjU3LWE0NTUtMTY0ZTMxMmMwODA5IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" 
             frameborder="0" 
             allowFullScreen="true">
@@ -108,9 +108,23 @@ def main():
                 }
                 .subtitle-text {
                     font-size: 18px;
-                    text-align: 30px;
+                    text-align: center;
                     color: Tomato;
                     padding-bottom: 30px;
+                }
+                @media (max-width: 768px) {
+                    .title-text {
+                        font-size: 30px;
+                    }
+                    .subtitle-text {
+                        font-size: 14px;
+                    }
+                }
+                /* Responsive layout for buttons */
+                @media (max-width: 600px) {
+                    .stButton>button {
+                        width: 100%;
+                    }
                 }
             </style>
         """, unsafe_allow_html=True)
