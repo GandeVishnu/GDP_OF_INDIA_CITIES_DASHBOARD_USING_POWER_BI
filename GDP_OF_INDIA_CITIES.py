@@ -88,9 +88,11 @@ def home():
     with col1:
         if st.button("Login"):
             st.session_state["page"] = "Login"
+            st.rerun()  # Ensure immediate navigation
     with col2:
         if st.button("Signup"):
             st.session_state["page"] = "Signup"
+            st.rerun()  # Ensure immediate navigation
 
 # Login Page
 def login():
@@ -101,10 +103,12 @@ def login():
         if email in users and users[email]["password"] == password:
             st.success("Login Successful! Redirecting...")
             st.session_state["page"] = "Dashboard"
+            st.rerun()  # Ensure immediate navigation
         else:
             st.error("Invalid email or password.")
     if st.button("Back to Home"):
         st.session_state["page"] = "Home"
+        st.rerun()  # Ensure immediate navigation
 
 # Signup Page
 def signup():
@@ -118,8 +122,9 @@ def signup():
         if not name or not email or not password or not confirm_password:
             st.error("All fields are required.")
         elif email in users:
-            st.error("User already exists! Please try logging in.")
+            st.error("User already exists! Redirecting to Login...")
             st.session_state["page"] = "Login"
+            st.rerun()  # Ensure immediate navigation
         elif password != confirm_password:
             st.error("Passwords do not match!")
         else:
@@ -127,8 +132,10 @@ def signup():
             save_users(users)
             st.success("Signup Successful! Redirecting to Home...")
             st.session_state["page"] = "Home"
+            st.rerun()  # Ensure immediate navigation
     if st.button("Back to Home"):
         st.session_state["page"] = "Home"
+        st.rerun()  # Ensure immediate navigation
 
 # Dashboard Page
 def display_dashboard():
@@ -147,6 +154,7 @@ def display_dashboard():
     """, unsafe_allow_html=True)
     if st.button("Signout"):
         st.session_state["page"] = "Home"
+        st.rerun()  # Ensure immediate navigation
 
 # --- MAIN APP ---
 def main():
